@@ -10,5 +10,6 @@ public class SystemLanguage{
 
         System.out.printf("The system language is: %s\n", language);
         System.out.printf("The system country is: %s\n", country);
-        System.out.printf("The system name is: %s\n", name);}
+        System.out.printf("The system name is: %s\n", name);
+    }
 }
