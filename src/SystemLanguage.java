@@ -1,15 +1,14 @@
 import java.util.Locale;
 
-public class SystemLanguage {
-    public static void main(String[] args){
-        Locale localeSystem = Locale.getDefault();
+public class SystemLanguage{
+    static void main(String[] args) {
+        Locale locate = Locale.getDefault();
 
-        String language = localeSystem.getLanguage();
-        String country = localeSystem.getCountry();
-        String name = localeSystem.getDisplayName();
+        String language = locate.getLanguage();
+        String country = locate.getCountry();
+        String name = locate.getDisplayName();
 
-        System.out.println("The system language is: " + language);
-        System.out.println("The system country is: " + country);
-        System.out.println("The system name is: " + name);
-    }
+        System.out.printf("The system language is: %s\n", language);
+        System.out.printf("The system country is: %s\n", country);
+        System.out.printf("The system name is: %s\n", name);}
 }

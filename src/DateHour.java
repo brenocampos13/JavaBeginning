@@ -1,9 +1,8 @@
 import java.util.Date;
 
 public class DateHour {
-    public static void main(String[] args) {
+    static void main(String[] args) {
         Date data = new Date();
-
-        System.out.println("The PC hour is: " + data);
+        System.out.println("A data atual do sistema é: " + data);
     }
 }

@@ -1,14 +1,14 @@
 import java.awt.Toolkit;
 import java.awt.Dimension;
 
-public class GetResolution {
-    public static void main (String[] args){
+public class GetResolution{
+    public static void main(String[] args){
         Toolkit toolkit = Toolkit.getDefaultToolkit();
-        Dimension dimension = toolkit.getScreenSize();
+        Dimension resolution = toolkit.getScreenSize();
 
-        int width = dimension.width;
-        int height = dimension.height;
+        int width = resolution.width;
+        int height = resolution.height;
 
-        System.out.println("The screen size is: " + width + "x" + height);
+        System.out.printf("A resolução da tela é " + width + "x" + height);
     }
 }
