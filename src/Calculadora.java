@@ -5,7 +5,7 @@ public class Calculadora {
         Scanner keyboard = new Scanner(System.in);
         System.out.println("Digite um número: ");
         int numero = keyboard.nextInt();
-        int parouimpar = numero / 2;
+        int parouimpar = numero % 2;
         double yoCube1 = numero;
         double exp1 = 3;
         if (parouimpar == 0) {
