@@ -11,4 +11,3 @@ public class OperadoresAritmedicos {
         System.out.printf("O resultado é: %s!\n", total);
     }
 }
-
