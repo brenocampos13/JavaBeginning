@@ -6,10 +6,7 @@ public class Tabuada {
         Scanner t = new Scanner(System.in);
         System.out.println("Digite um número para calcular:");
         int numero = t.nextInt();
-        while (contador <= 10){
-            int n1 = numero * contador;
-            System.out.printf("%d x %d = %d\n", numero, contador, n1);
-            contador++;
-        }
+        MatOp.TabuadaLoop(numero);
     }
+
 }
