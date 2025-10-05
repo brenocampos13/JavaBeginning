@@ -8,5 +8,4 @@ public class Tabuada {
         int numero = t.nextInt();
         MatOp.TabuadaLoop(numero);
     }
-
 }
