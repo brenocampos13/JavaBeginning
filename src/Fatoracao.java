@@ -6,7 +6,7 @@ public class Fatoracao {
         int numero = t.nextInt();
         int f = 1;
         int c = numero;
-        while (c >= 1) {
+        while (c >= 1){
             f *= c;
             c--;
         }

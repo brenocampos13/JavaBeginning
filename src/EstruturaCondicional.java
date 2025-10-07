@@ -6,22 +6,26 @@ public class EstruturaCondicional {
     System.out.println("Digite a quantidade de patas:");
     int qntdPernas = teclado.nextInt();
     String tipo;
-        switch (qntdPernas){
-            case 1:
-                tipo = "Saci";
-                break;
-            case 2:
-                tipo = "Bípede";
-                break;
-            case 4:
-                tipo = "Quadrúpede";
-                break;
-            case 6, 8:
-                tipo = "Aranha";
-                break;
-            default:
-                tipo = "ET";
-        }
-        System.out.println(tipo);
+    switch (qntdPernas) {
+        case 1:
+            tipo = "saci";
+            break;
+        case 2:
+            tipo = "bípede";
+            break;
+        case 3:
+            tipo = "tripé";
+            break;
+        case 4:
+            tipo = "quadrúpede";
+            break;
+        case 6, 8:
+            tipo = "aranha";
+            break;
+        default:
+            tipo = "ET";
+            break;
+    }
+    System.out.printf("Isso é um %s!", tipo);
     }
 }

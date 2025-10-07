@@ -6,5 +6,6 @@ public class Atribuicao {
         String nome3 = "CursoVideo";
         System.out.println(nome2 == nome3);
         System.out.println(nome2.equals(nome3));
+
     }
 }
