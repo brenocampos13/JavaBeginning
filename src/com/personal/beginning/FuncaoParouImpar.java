@@ -1,4 +1,4 @@
-package Funções;
+package com.personal.beginning;
 
 import java.util.Scanner;
 
