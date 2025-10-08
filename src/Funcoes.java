@@ -1,19 +1,20 @@
-import java.util.Scanner;
-public class Procedimento {
+public class Funcoes {
     static int a = 0;
     static int b = 1;
     static int c;
+
     static void main(String[] args) {
         System.out.println(a);
         System.out.println(b);
         for (int i = 3; i <= 10; i++){
-            Fibonacci(a, b);
+            int proximoFib = Fibonacci();
+            System.out.println(proximoFib);
         }
     }
-    public static void Fibonacci (int A, int B) {
+    public static int Fibonacci(){
         c = a + b;
         a = b;
         b = c;
-        System.out.println(c);
+        return c;
     }
 }
