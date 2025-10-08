@@ -1,3 +1,5 @@
+package com.personal.beginning;
+
 public class Funcoes {
     static int a = 0;
     static int b = 1;
