@@ -37,6 +37,5 @@ public class Calc {
         System.out.printf("Quantidade de números ímpares: %d!\n", impares);
         System.out.printf("Maiores que cem: %d!\n", mq100);
         System.out.printf("A média de todos os números é de %.2f\n", media);
-
     }
 }
