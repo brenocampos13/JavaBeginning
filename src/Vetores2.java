@@ -11,7 +11,7 @@ public class Vetores2 {
         int valor = t.nextInt();
         Arrays.fill(n, valor);
         System.out.printf("Criamos a array com %d casas e todas com o número %d como inicial!\n", tam, valor);
-        for (int i: n) {
+        for (int i: n){
             System.out.print(valor + " ");
         }
     }
