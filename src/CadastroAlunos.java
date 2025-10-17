@@ -20,7 +20,7 @@ public class CadastroAlunos {
         }
         System.out.println("ALUNOS CADASTRADOS:");
         System.out.println("===================");
-        for(int c = 0; c <= nomes.length - 1; c++){
+        for (int c = 0; c <= nomes.length - 1; c++){
             System.out.printf("A média do aluno %s é %.2f\n", nomes[c], media[c]);
         }
     }
