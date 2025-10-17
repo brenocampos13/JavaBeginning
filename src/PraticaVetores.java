@@ -1,6 +1,5 @@
 import java.util.Scanner;
 import java.util.Arrays;
-import java.util.ArrayList;
 
 public class PraticaVetores {
     static void main(String[] args) {
