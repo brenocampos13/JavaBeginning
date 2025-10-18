@@ -5,12 +5,12 @@ public class TorneioFutebol {
         Scanner t = new Scanner(System.in);
 
         String[] times = new String[3];
-        int qtdTimes = 0;
+        int qntdTimes = 0;
 
         System.out.println("Digite um time ('fim' encerra):");
 
         while (true) {
-            System.out.println("Digite o time (Maximo 3):");
+            System.out.println("Digite o time (Max. 3):");
             String nome = t.nextLine().trim();
 
             if (nome.equalsIgnoreCase("fim")) {
@@ -18,30 +18,30 @@ public class TorneioFutebol {
             }
 
             if (nome.isEmpty()) {
-                System.out.println("Termo inválido, digite novamente!");
+                System.out.println("Termo incorreto, digite novamente!");
                 continue;
             }
-
             boolean repetido = false;
-            for (int i = 0; i < qtdTimes; i++) {
+            for (int i = 0; i < qntdTimes; i++) {
+
                 if (times[i].equalsIgnoreCase(nome)) {
                     repetido = true;
                     break;
                 }
             }
-
             if (repetido) {
-                System.out.println("Este time já foi adicionado!");
+                System.out.println("Este time já está na lista!");
             } else {
-                times[qtdTimes] = nome;
-                qtdTimes++;
+                times[qntdTimes] = nome;
+                qntdTimes++;
             }
         }
-        System.out.println("CONFRONTOS");
 
-        for (int i = 0; i < qtdTimes; i++){
-            for (int j = i + 1; j < qtdTimes; j++){
-                System.out.println(times[i] + "[] x []" + times[j]);
+        System.out.println("CONFRONTOS:");
+
+        for (int i = 0; i < qntdTimes; i++) {
+            for (int j = i + 1; j < qntdTimes; j++) {
+                System.out.println(times[i] + "[] X []" + times[j]);
             }
         }
     }
