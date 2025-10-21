@@ -7,10 +7,9 @@ public class TorneioFutebol {
         String[] times = new String[3];
         int qntdTimes = 0;
 
-        System.out.println("Digite 3 times:");
+        System.out.println("Digite um time até no máximo 3 ('fim' para):");
 
         while (true){
-            System.out.println("Digite um time, 'fim' encerra!:");
             String nome = t.nextLine().trim();
 
             if (nome.equalsIgnoreCase("fim")){
@@ -31,7 +30,7 @@ public class TorneioFutebol {
             }
 
             if (repetido){
-                System.out.println("Este nome já está na lista!");
+                System.out.println("Este time já está na lista!");
             } else {
                 times[qntdTimes] = nome;
                 qntdTimes++;
