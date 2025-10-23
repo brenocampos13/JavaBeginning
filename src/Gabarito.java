@@ -13,9 +13,9 @@ public class Gabarito {
             qntdResp++;
         }
 
-        String[] nomeAlunos = new String[5];
-        String[][] respAlunos = new String[5][3];
         int qntdAlunos = 0;
+        String[] nomeAlunos = new String[5];
+        String[][] respAlunos = new String[5][5];
 
         while (true) {
             System.out.println("Digite o nome do aluno:");
@@ -30,26 +30,32 @@ public class Gabarito {
             System.out.printf("Digite o gabarito da prova de %s\n", nomeAlunos[qntdAlunos]);
 
             for (int i = 0; i < qntdResp; i++) {
-                respAlunos[qntdAlunos][i] = t.nextLine().trim();
+                for (int j = 0; j < qntdResp; j++) {
+                    respAlunos[i][j] = t.nextLine().trim();
+                }
             }
             qntdAlunos++;
         }
 
+        float nota = 0;
+        int qntdAcertos = 0;
         float notaSala = 0;
 
         for (int i = 0; i < qntdResp; i++) {
-            float nota = 0;
-            for (int j = 0; j < 3; j++){
-                if (respAlunos[i][j].equalsIgnoreCase(gabarito[j])){
-                    nota += 2;
-                    notaSala += 2;
+            for (int j = 0; j < qntdResp; j++){
+                if (respAlunos[i][j].equals(gabarito[i])) {
+                nota += 2;
+                notaSala += 2;
+                qntdAcertos += 1;
                 }
             }
-            System.out.printf("Nota de %s: %.2f\n", nomeAlunos[i], nota);
         }
 
-        float media = notaSala / (qntdAlunos * 3 * 2);
+        float media = (notaSala + notaSala) / qntdAlunos;
 
+        for (int i = 0; i < qntdAlunos; i++) {
+            System.out.printf("O aluno %s acertou %d questões e sua nota foi %.2f!\n", nomeAlunos[i], qntdAcertos, nota);
+        }
         System.out.printf("A média da sala foi de %.2f", media);
     }
 }
