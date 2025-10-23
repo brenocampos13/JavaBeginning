@@ -42,7 +42,7 @@ public class Gabarito {
             for (int j = 0; j < respAlunos.length; j++) {
                 respAlunos[i][j] = t.nextLine().trim();
 
-                if (respAlunos[i][j].equals(gabarito[j])) {
+                if (respAlunos[i][j].equalsIgnoreCase(gabarito[j])) {
                     nota[i] += 2;
                     qntdAcertos[i] += 1;
                     notaSala += 2;
