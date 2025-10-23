@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Gabarito {
@@ -29,8 +30,8 @@ public class Gabarito {
             qntdAlunos++;
         }
 
-        float nota = 0;
-        int qntdAcertos = 0;
+        float[] nota = new float[qntdAlunos];
+        int[] qntdAcertos = new int[qntdAlunos];
         float notaSala = 0;
 
         String[][] respAlunos = new String[5][5];
@@ -42,18 +43,18 @@ public class Gabarito {
                 respAlunos[i][j] = t.nextLine().trim();
 
                 if (respAlunos[i][j].equals(gabarito[j])) {
-                    nota += 2;
+                    nota[i] += 2;
+                    qntdAcertos[i] += 1;
                     notaSala += 2;
-                    qntdAcertos += 1;
                 }
             }
         }
 
-        //float media = (notaSala + notaSala) / qntdAlunos;
-
         for (int i = 0; i < qntdAlunos; i++) {
-            System.out.printf("O aluno %s acertou %d questões e sua nota foi %.2f!\n", nomeAlunos[i], qntdAcertos, nota);
+                System.out.printf("O aluno %s acertou %d questões e sua nota foi %.2f!\n", nomeAlunos[i], qntdAcertos[i], nota[i]);
         }
-        //System.out.printf("A média da sala foi de %.2f", media);
+
+        float media = notaSala / qntdAlunos;
+        System.out.printf("A média da sala é de %.2f", media);
     }
 }
