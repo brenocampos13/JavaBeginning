@@ -27,26 +27,21 @@ public class Gabarito {
                 break;
             }
 
-            System.out.printf("Digite o gabarito da prova de %s\n", nomeAlunos[qntdAlunos]);
-
-            for (int i = 0; i < qntdResp; i++) {
-                for (int j = 0; j < qntdResp; j++) {
-                    respAlunos[i][j] = t.nextLine().trim();
-                }
-            }
             qntdAlunos++;
         }
-
         float nota = 0;
         int qntdAcertos = 0;
         float notaSala = 0;
 
-        for (int i = 0; i < qntdResp; i++) {
-            for (int j = 0; j < qntdResp; j++){
+        for (int i = 0; i < qntdAlunos; i++) {
+            System.out.printf("Digite o gabarito da prova de %s\n", nomeAlunos[i]);
+
+            for (int j = 0; j < qntdResp; j++) {
+                respAlunos[i][j] = t.nextLine().trim();
                 if (respAlunos[i][j].equals(gabarito[i])) {
-                nota += 2;
-                notaSala += 2;
-                qntdAcertos += 1;
+                    nota += 2;
+                    notaSala += 2;
+                    qntdAcertos += 1;
                 }
             }
         }
