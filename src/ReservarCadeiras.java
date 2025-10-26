@@ -28,6 +28,8 @@ public class ReservarCadeiras {
 
             if (Arrays.asList(cadeiras).contains(reserva)) {
                 cadeiras.remove(reserva);
+            } else {
+                System.out.println("Este acento já foi ocupado!");
             }
 
             System.out.println(cadeiras);
