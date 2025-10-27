@@ -33,9 +33,6 @@ public class ReservarCadeiras {
             if (indice < 0){
                 System.out.println("Está cadeira já foi reservada!");
 
-            }  else if (Arrays.asList(cadeiras).contains(reserva)) {
-                System.out.println("Está cadeira já foi reservada!");
-
             } else {
                 cadeiras.set(indice, "==");
                 qntdCad++;
