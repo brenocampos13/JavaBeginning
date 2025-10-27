@@ -1,6 +1,7 @@
 import java.util.Scanner;
 import java.util.Arrays;
 import java.util.ArrayList;
+
 public class ReservarCadeiras {
     static void main(String[] args) {
         Scanner t = new Scanner(System.in);
