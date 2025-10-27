@@ -1,5 +1,6 @@
 import java.util.Scanner;
 import java.util.ArrayList;
+
 public class MatrizesArmazenar {
     static void main(String[] args) {
         Scanner t = new Scanner(System.in);
@@ -19,6 +20,7 @@ public class MatrizesArmazenar {
 
             }
         }
+
         System.out.print(pares);
         System.out.println(impares);
     }
