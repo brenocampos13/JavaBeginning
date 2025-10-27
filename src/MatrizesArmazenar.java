@@ -1,27 +1,22 @@
-import java.util.Scanner;
 import java.util.ArrayList;
 
 public class MatrizesArmazenar {
     static void main(String[] args) {
-        Scanner t = new Scanner(System.in);
-
-        ArrayList<Integer> pares = new ArrayList<>();
-        ArrayList<Integer> impares = new ArrayList<>();
-        int[] numerosPares = new int[9];
-
-        for (int i = 0; i < 9; i++){
-            numerosPares[i] = t.nextInt();
-
-            if (numerosPares[i] % 2 == 0){
-                pares.add(numerosPares[i]);
-
-            } else {
-                impares.add(numerosPares[i]);
-
+        int[][] matriz = new int[3][3];
+        for (int i = 0; i < 3; i++){
+            for (int j = 0; j < 3; j++){
+                if (matriz[i] == matriz[j]){
+                    matriz[i][j] = 1;
+                } else {
+                    matriz[i][j] = 0;
+                }
             }
         }
-
-        System.out.print(pares);
-        System.out.println(impares);
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                System.out.printf("%d ", matriz[i][j]);
+            }
+            System.out.println();
+        }
     }
 }
