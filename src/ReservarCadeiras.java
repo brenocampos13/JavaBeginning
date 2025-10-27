@@ -5,7 +5,7 @@ public class ReservarCadeiras {
     static void main(String[] args) {
         Scanner t = new Scanner(System.in);
 
-        ArrayList cadeiras = new ArrayList<>(10);
+        ArrayList <String> cadeiras = new ArrayList<>(10);
 
         System.out.println("CADEIRAS DISPONÍVEIS:");
 
@@ -13,26 +13,37 @@ public class ReservarCadeiras {
             cadeiras.add("B" + (i + 1));
         }
         System.out.print(cadeiras);
-        System.out.println("\n===================================================");
+        System.out.println("\n=========================================");
+
+        int qntdCad = 0;
 
         for (int i = 0; i < cadeiras.size(); i++) {
             System.out.println("\nDeseja reservar uma cadeira? [S/N]");
             String resp = t.nextLine().trim();
 
             if (resp.equalsIgnoreCase("N")) {
+                System.out.printf("Você reservou %d cadeiras!", qntdCad);
                 break;
             }
 
             System.out.println("Qual a cadeira a ser reservada?");
             String reserva = t.nextLine().trim();
+            int indice = cadeiras.lastIndexOf(reserva);
 
-            if (Arrays.asList(cadeiras).contains(reserva)) {
-                cadeiras.remove(reserva);
+            if (indice < 0){
+                System.out.println("Está cadeira já foi reservada!");
+
+            }  else if (Arrays.asList(cadeiras).contains(reserva)) {
+                System.out.println("Está cadeira já foi reservada!");
+
             } else {
-                System.out.println("Este acento já foi ocupado!");
+                cadeiras.set(indice, "==");
+                qntdCad++;
             }
 
+            System.out.println("=========================================");
             System.out.println(cadeiras);
+            System.out.println("=========================================");
         }
     }
 }
